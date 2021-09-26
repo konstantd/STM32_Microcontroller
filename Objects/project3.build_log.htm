@@ -1,0 +1,119 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.29.0.0
+Copyright (C) 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Christos Emmanouil, auth, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.29.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.29.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
+Dialog DLL:      TCM.DLL V1.36.5.0
+ 
+<h2>Project:</h2>
+C:\Users\John Doe\Desktop\MCU Projects\3\project3.uvprojx
+Project File Date:  06/09/2020
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'Target 1'
+compiling delay.c...
+compiling leds.c...
+compiling lcd.c...
+compiling switches.c...
+compiling main.c...
+src\project03Lib.h(18): warning:  #1-D: last line of file ends without a newline
+  #endif // PROJECT03LIB_H
+src\main.c(128): warning:  #223-D: function "sprintf" declared implicitly
+  				sprintf(str1, "HighTemp Reached");
+src\main.c(138): warning:  #223-D: function "sprintf" declared implicitly
+  				sprintf(str1, "Low Temp Reached");
+src\main.c(146): warning:  #223-D: function "sprintf" declared implicitly
+  				sprintf(str2, "    %.2f  C    ", tempArray[iTemp]);
+src\main.c(171): warning:  #223-D: function "sprintf" declared implicitly
+  			sprintf(str1, "MyThermometer :)");
+src\main.c(194): warning:  #223-D: function "sprintf" declared implicitly
+  				sprintf(str1, "AvgTemp: %.2f C", avgTemp);
+src\main.c(65): warning:  #550-D: variable "presence"  was set but never used
+  	uint8_t presence = 0;				// DHT11_check_response result
+src\main.c(68): warning:  #550-D: variable "SUM"  was set but never used
+  	uint16_t SUM, Temp, Rh;				// DHT11_read results
+src\main.c(70): warning:  #550-D: variable "Rh_byte2"  was set but never used
+  	uint8_t Rh_byte1, Rh_byte2;			// DHT11_read results
+src\main.c: 9 warnings, 0 errors
+compiling project03Lib.c...
+src\project03Lib.c(56): warning:  #68-D: integer conversion resulted in a change of sign
+  		else Response = -1;
+src\project03Lib.c(90): warning:  #68-D: integer conversion resulted in a change of sign
+  	else Response = -1;
+src\project03Lib.c: 2 warnings, 0 errors
+compiling comparator.c...
+.\drivers\adc.h(10): warning:  #47-D: incompatible redefinition of macro "ADC1_BASE"  (declared at line 694 of "C:\Users\John Doe\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f401xe.h")
+  #define ADC1_BASE             (APB2PERIPH_BASE + 0x2000)
+.\drivers\adc.h(23): warning:  #47-D: incompatible redefinition of macro "GPIOA_BASE"  (declared at line 708 of "C:\Users\John Doe\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f401xe.h")
+  #define GPIOA_BASE            (AHB1PERIPH_BASE + 0x0000)
+drivers\comparator.c: 2 warnings, 0 errors
+compiling gpio.c...
+compiling adc.c...
+.\drivers\adc.h(10): warning:  #47-D: incompatible redefinition of macro "ADC1_BASE"  (declared at line 694 of "C:\Users\John Doe\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f401xe.h")
+  #define ADC1_BASE             (APB2PERIPH_BASE + 0x2000)
+.\drivers\adc.h(23): warning:  #47-D: incompatible redefinition of macro "GPIOA_BASE"  (declared at line 708 of "C:\Users\John Doe\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f401xe.h")
+  #define GPIOA_BASE            (AHB1PERIPH_BASE + 0x0000)
+drivers\adc.c: 2 warnings, 0 errors
+compiling i2c.c...
+compiling stm32f4xx_gpio.c...
+compiling stm32f4xx_adc.c...
+compiling stm32f4xx_i2c.c...
+compiling stm32f4xx_usart.c...
+compiling stm32f4xx_rcc.c...
+assembling startup_stm32f401xe.s...
+compiling timer.c...
+compiling uart.c...
+compiling system_stm32f4xx.c...
+linking...
+Program Size: Code=11044 RO-data=612 RW-data=76 ZI-data=1636  
+".\Objects\project3.axf" - 0 Error(s), 15 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.6.0.pack
+                ARM.CMSIS.5.6.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.3.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.14.0.pack
+                Keil.STM32F4xx_DFP.2.14.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  C:\Users\John Doe\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include
+  C:\Users\John Doe\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.3.0
+
+   * Component: Keil::Device:Startup:2.6.3
+      Source file:   MDK\Device\Source\ARM\STM32F401xx_OPT.s
+      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f401xe.s
+      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
+Build Time Elapsed:  00:00:04
+</pre>
+</body>
+</html>
